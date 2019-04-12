@@ -20,6 +20,13 @@ export default new Router({
 		meta: {
 			title: '授权中……'
 		}
+	},
+	{
+		path: '*',
+		component: resolve => require(['@/components/page/NotFount'], resolve),
+		meta: {
+			title: '错误界面'
+		}
 	}
   ]
 })
