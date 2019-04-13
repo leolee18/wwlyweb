@@ -19,8 +19,7 @@
 		margin:0;
 		font-family:'Avenir', Helvetica, Arial, sans-serif;
 		font-size:13px;
-		text-align: center;
-		color: #2c3e50;
+		color: #3E3A39;
 		background-color:#fff;
 		-webkit-font-smoothing: antialiased;
 		-moz-osx-font-smoothing: grayscale;

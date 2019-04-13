@@ -18,7 +18,7 @@ Vue.config.productionTip = false
 
 
 router.beforeEach((to, from, next) => {
-  document.title = to.meta.title;
+  //document.title = to.meta.title;
 	console.log(to.meta.title);
   var mToken = storage.get('msdWebToken'); 
   if (!mToken) {
