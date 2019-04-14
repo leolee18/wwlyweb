@@ -34,7 +34,7 @@
 		height:auto;
 		min-height:100%;
 		margin:0 auto;
-		background-color:#eee;
+		background-color:#fff;
 	}
 	.evno{
 		pointer-events: none;

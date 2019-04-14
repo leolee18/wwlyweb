@@ -1,12 +1,11 @@
 <template>
 	<div @click="indListClick" class="container">
-		<img src="../assets/dtbg.jpg" class="ind-demo" />
-		<div class="ind-dt ind-dt1 dtimg" data-mtyp="jlly"></div>
-		<div class="ind-dt ind-dt2 dtimg" data-mtyp="mrt"></div>
-		<div class="ind-dt ind-dt3 dtimg" data-mtyp="jsly"></div>
-		<div class="ind-dt ind-dt4 dtimg" data-mtyp="yskly"></div>
-		<div class="ind-dt ind-dt5 dtimg" data-mtyp="syly"></div>
-		<div class="ind-lj evno"></div>
+		<img src="../assets/ind_dt_jlly.png" class="ind-dt ind-dt1 dtimg" data-mtyp="jlly"/>
+		<img src="../assets/ind_dt_mrt.png" class="ind-dt ind-dt2 dtimg" data-mtyp="mrt"/>
+		<img src="../assets/ind_dt_jsly.png" class="ind-dt ind-dt3 dtimg" data-mtyp="jsly"/>
+		<img src="../assets/ind_dt_ysly.png" class="ind-dt ind-dt4 dtimg" data-mtyp="yskly"/>
+		<img src="../assets/ind_dt_syly.png" class="ind-dt ind-dt5 dtimg" data-mtyp="syly"/>
+		<img src="../assets/ind_lj.png" class="ind-lj evno"/>
 		<img src="../assets/ind_lygl.png" class="ind-jz ind-jz1 jzimg" data-mtyp="lygl"/>
 		<img src="../assets/ind_jlly.png" class="ind-jz ind-jz2 evno"/>
 		<img src="../assets/ind_wwbzk.png" class="ind-jz ind-jz3 jzimg" data-mtyp="wwbzk"/>
@@ -85,6 +84,7 @@
 		height:100%;
 		min-height:1000px;
 		background-color:#3E3A39;
+		overflow: hidden;
 	}
 	.jzimg:active {
 		-webkit-filter: drop-shadow(0px 0px 5px #f5c01b);
@@ -97,11 +97,9 @@
 	.ind-lj{
 		position: absolute;
 		display: block;
-		width: 100%;
-		height: 200px;
-		margin-top: 0;
+		margin-top: 28%;
+		margin-left: 12%;
 		z-index: 2;
-		background-color: rgba(255,255,255,0.2);
 	}
 	.ind-demo{
 		position: absolute;
@@ -113,30 +111,27 @@
 	.ind-dt{
 		position: absolute;
 		display: block;
-		width: 100px;
-		height: 100px;
 		z-index: 1;
-		background-color: rgba(255,0,0,1);
 	}
 	.ind-dt1{
-		margin-top: 30%;
-		margin-left: 70%;
+		margin-top: 23%;
+		margin-left:63%;
 	}
 	.ind-dt2{
-		margin-top: 60%;
-		margin-left: 6%;
+		margin-top: 58%;
+		margin-left: -7%;
 	}
 	.ind-dt3{
-		margin-top:70%;
-		margin-left: 70%;
+		margin-top:59%;
+		margin-left: 60%;
 	}
 	.ind-dt4{
-		margin-top: 90%;
-		margin-left:6%;
+		margin-top: 85%;
+		margin-left:5%;
 	}
 	.ind-dt5{
 		margin-top: 90%;
-		margin-left: 70%;
+		margin-left: 54%;
 	}
 	.ind-jz{
 		position: absolute;

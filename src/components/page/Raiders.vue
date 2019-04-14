@@ -5,14 +5,14 @@
 				<img src="../../assets/rai_xxy.jpg" class="rai-div-img" />
 				<span class="rai-div-text">新学员看这里</span>
 			</div>
-			<a v-for="(sliden, indexn) in apLygln" :key="indexn" :href="sliden.uri" class="rai-a"><img src="../../assets/ind_dh_jsly.png" class="rai-a-i"/>{{sliden.name}}</a>
+			<a v-for="(sliden, indexn) in apLygln" :key="indexn" :href="sliden.uri" class="rai-a"><img src="../../assets/rai_i.png" class="rai-a-i"/>{{sliden.name}}</a>
 		</div>
 		<div class="rai-list">
 			<div class="rai-div">
 				<img src="../../assets/rai_lxy.jpg" class="rai-div-img" />
 				<span class="rai-div-text">老学员看这里</span>
 			</div>
-			<a v-for="(slideo, indexo) in apLyglo" :key="indexo" :href="slideo.uri" class="rai-a">{{slideo.name}}</a>
+			<a v-for="(slideo, indexo) in apLyglo" :key="indexo" :href="slideo.uri" class="rai-a"><img src="../../assets/rai_i.png" class="rai-a-i"/>{{slideo.name}}</a>
 		</div>
 	</div>
 </template>
@@ -78,14 +78,14 @@
 		position: relative;
 		height: 60px;
 		display: block;
-		padding-left: 50px;
+		padding-left: 40px;
 		font-size: 30px;
 		line-height: 60px;
 		color: #0076ff;
 	}
 	.rai-a-i{
 		position: absolute;
-		top:10px;
+		top:15px;
 		left: 0;
 	}
 </style>

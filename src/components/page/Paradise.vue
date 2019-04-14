@@ -1,6 +1,6 @@
 <template>
 	<div class="container">
-		<img src="../../assets/ind_dh_wwbzk.png" class="cri-head-img" />
+		<img :src="'http://51coach.com/wwlyweb/'+mPObj.hImg" class="cri-head-img" />
 		<div @click="listClick" class="cri-con">
 			<div class="cri-tit">{{mPObj.jText}}</div>
 			<div class="cri-cont">{{mPObj.jCont}}</div>
@@ -16,6 +16,7 @@
 		data () {
 			return {
 				mPObj:{
+					'hImg':'',
 					'jText':'',
 					'jCont':'',
 					'aText':''
