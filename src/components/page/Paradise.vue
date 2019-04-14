@@ -1,33 +1,89 @@
 <template>
 	<div class="container">
 		<img src="../../assets/ind_dh_wwbzk.png" class="cri-head-img" />
-		<div class="cri-con">
-			<div class="cri-tit">厅大师傅要</div>
-			<div class="cri-cont">大师傅夺士大夫士大夫士大夫士大夫</div>
-			<div class="cri-tit">厅大师傅要</div>
-			<div class="cri-one">45月大日：枯士大夫士大夫</div>
-			<div class="cri-one">45月大日：枯士大夫士大夫</div>
-			<div class="cri-one">45月大日：枯士大夫士大夫</div>
-			<div class="cri-one">45月大日：枯士大夫士大夫</div>
-			<div class="cri-one">45月大日：枯士大夫士大夫</div>
-			<div class="cri-one">45月大日：枯士大夫士大夫</div>
-			<div class="cri-one">45月大日：枯士大夫士大夫</div>
-			<div class="cri-one">45月大日：枯士大夫士大夫</div>
+		<div @click="listClick" class="cri-con">
+			<div class="cri-tit">{{mPObj.jText}}</div>
+			<div class="cri-cont">{{mPObj.jCont}}</div>
+			<div class="cri-tit">{{mPObj.aText}}</div>
+			<div v-for="(slide, index) in mPArr" :key="index" v-bind:data-uri="slide.uri" class="cri-one actob">{{slide.name}}</div>
 		</div>
 	</div>
 </template>
 
 <script>
+	import {mapGetters} from 'vuex';
 	export default {
 		data () {
 			return {
+				mPObj:{
+					'jText':'',
+					'jCont':'',
+					'aText':''
+				},
+				mPArr:[]
+			}
+		},
+		computed:{
+			...mapGetters([
+				'apParAll',
+				'parObj'
+			])
+		},
+		watch: {
+		    parObj(val) {
+				this.setParObj(val);
+			},
+			apParAll(val) {
+				this.setParArr(val);
 			}
 		},
 		mounted(){
 			let self = this;
+			if(self.parObj){
+				self.setParObj(self.parObj);
+			}
+			if(self.apParAll){
+				self.setParArr(self.apParAll);
+			}
 		},
 		methods: {
-			
+			setParObj(val){
+				let mType = this.$route.params.typ;
+				if(!val){
+					return;
+				}
+				if(mType === 'jlly'){
+					this.mPObj = val.mjlly;
+				}else if(mType === 'mrt'){
+					this.mPObj = val.mmrt;
+				}else if(mType === 'jsly'){
+					this.mPObj = val.mjsly;
+				}else if(mType === 'yskly'){
+					this.mPObj = val.myskly;
+				}else if(mType === 'syly'){
+					this.mPObj = val.msyly;
+				}
+			},
+			setParArr(val){
+				let mType = this.$route.params.typ;
+				if(mType === 'jlly'){
+					this.mPArr = val.jlly;
+				}else if(mType === 'mrt'){
+					this.mPArr = val.mrt;
+				}else if(mType === 'jsly'){
+					this.mPArr = val.jsly;
+				}else if(mType === 'yskly'){
+					this.mPArr = val.yskly;
+				}else if(mType === 'syly'){
+					this.mPArr = val.syly;
+				}
+			},
+			listClick(e){
+				let mTar = e.target;
+				if(mTar.className.indexOf("cri-one") !== -1){
+					window.location = mTar.dataset.uri;
+				}
+			}
 		}
 	}
 </script>

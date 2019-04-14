@@ -5,13 +5,13 @@ Vue.use(Vuex);
 import getters from './getters'
 import actions from './actions'
 import loginwx from './modules/loginwx'
-import auser from './modules/adminUser'
+import allpage from './modules/allpage'
 
 export default new Vuex.Store({
 	getters,
 	actions,
 	modules:{
 		loginwx,
-		auser
+		allpage
 	}
 });

@@ -6,7 +6,11 @@
 
 <script>
 	export default {
-		name: 'App'
+		name: 'App',
+		mounted(){
+			var self = this;
+			self.$store.dispatch('allPageFun');
+		},
 	}
 </script>
 
@@ -31,7 +35,6 @@
 		min-height:100%;
 		margin:0 auto;
 		background-color:#eee;
-		overflow:hidden;
 	}
 	.evno{
 		pointer-events: none;

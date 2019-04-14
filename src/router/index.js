@@ -29,7 +29,7 @@ export default new Router({
 			}
 		},
 		{
-			path: '/paradise',
+			path: '/paradise/:typ',
 			component: resolve => require(['@/components/page/Paradise'], resolve),
 			meta: {
 				title: '五维乐园'

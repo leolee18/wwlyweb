@@ -2,12 +2,12 @@ const axios = require('axios');
 
 function serAdd(addres){
 	var serUrl = 'http://'+window.location.host+'/';
-	var serInter = 'http://51coach.com/msdweb/';
+	var serInter = 'http://51coach.com/wwlyweb/';
 	
 	var kc = 'interface/';
 	var returnStr = serUrl;
 	switch (addres){
-		case 'appCourse.php'://demo
+		case 'all.php'://页面数据集
 		case 'wxLogin.php'://登录
 			returnStr = serInter+kc+addres;
 			break;

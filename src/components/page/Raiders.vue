@@ -2,30 +2,33 @@
 	<div class="container">
 		<div class="rai-list">
 			<div class="rai-div">
-				<img src="../../assets/rai_lxy.png" class="rai-div-img" />
-				<span class="rai-div-text">老学员看这里</span>
+				<img src="../../assets/rai_xxy.jpg" class="rai-div-img" />
+				<span class="rai-div-text">新学员看这里</span>
 			</div>
-			<a href="http://www.baidu.com" class="rai-a"><img src="../../assets/ind_dh_jsly.png" class="rai-a-i"/>城士大夫士大夫</a>
-			<a href="http://www.baidu.com" class="rai-a">城士大夫士大夫</a>
-			<a href="http://www.baidu.com" class="rai-a">城士大夫士大夫</a>
+			<a v-for="(sliden, indexn) in apLygln" :key="indexn" :href="sliden.uri" class="rai-a"><img src="../../assets/ind_dh_jsly.png" class="rai-a-i"/>{{sliden.name}}</a>
 		</div>
 		<div class="rai-list">
 			<div class="rai-div">
-				<img src="../../assets/rai_lxy.png" class="rai-div-img" />
+				<img src="../../assets/rai_lxy.jpg" class="rai-div-img" />
 				<span class="rai-div-text">老学员看这里</span>
 			</div>
-			<a href="http://www.baidu.com" class="rai-a">城士大夫士大夫</a>
-			<a href="http://www.baidu.com" class="rai-a">城士大夫士大夫</a>
-			<a href="http://www.baidu.com" class="rai-a">城士大夫士大夫</a>
+			<a v-for="(slideo, indexo) in apLyglo" :key="indexo" :href="slideo.uri" class="rai-a">{{slideo.name}}</a>
 		</div>
 	</div>
 </template>
 
 <script>
+	import {mapGetters} from 'vuex';
 	export default {
 		data () {
 			return {
 			}
+		},
+		computed:{
+			...mapGetters([
+				'apLygln',
+				'apLyglo'
+			])
 		},
 		mounted(){
 			let self = this;
@@ -51,8 +54,10 @@
 		position: relative;
 		height: 200px;
 		width: 100%;
-		border: 1px solid #00244D;
+		border: 1px dashed #D5D5D5;
 		margin: 80px auto 40px;
+		overflow: hidden;
+		background-color: #fff;
 	}
 	.rai-div-img{
 		position: absolute;

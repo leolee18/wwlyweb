@@ -1,36 +1,57 @@
 <template>
 	<div class="container">
 		<img src="../../assets/ind_dh_wwbzk.png" class="cri-head-img" />
-		<div class="cri-con cri-bottom">
-			<div class="cri-tit">厅大师傅要</div>
-			<div class="cri-cont">大师傅夺士大夫士大夫士大夫士大夫</div>
-			<div class="cri-tit">厅大师傅要</div>
-			<div class="cri-one">45月大日：枯士大夫士大夫</div>
-			<div class="cri-one">45月大日：枯士大夫士大夫</div>
-			<div class="cri-one">45月大日：枯士大夫士大夫</div>
-			<div class="cri-one">45月大日：枯士大夫士大夫</div>
-			<div class="cri-one">45月大日：枯士大夫士大夫</div>
-			<div class="cri-one">45月大日：枯士大夫士大夫</div>
-			<div class="cri-one">45月大日：枯士大夫士大夫</div>
-			<div class="cri-one">45月大日：枯士大夫士大夫</div>
+		<div @click="listClick" class="cri-con cri-bottom">
+			<div class="cri-tit">{{mPObj.jText}}</div>
+			<div class="cri-cont">{{mPObj.jCont}}</div>
+			<div class="cri-tit">{{mPObj.aText}}</div>
+			<div v-for="(slide, index) in apWwbzk" :key="index" v-bind:data-uri="slide.uri" class="cri-one actob">{{slide.name}}</div>
 		</div>
 		<div class="cri-fb">
-			<div class="cri-fb-all acto">￥8800 立即加入</div>
+			<div @click="criFoot" class="cri-fb-all acto">￥8800 立即加入</div>
 		</div>
 	</div>
 </template>
 
 <script>
+	import {mapGetters} from 'vuex';
 	export default {
 		data () {
 			return {
+				mPObj:{
+					'jText':'',
+					'jCont':'',
+					'aText':''
+				}
+			}
+		},
+		computed:{
+			...mapGetters([
+				'apWwbzk',
+				'parObj'
+			])
+		},
+		watch: {
+		    parObj(val) {
+				this.mPObj = val.mbzk;
 			}
 		},
 		mounted(){
 			let self = this;
+			if(self.parObj){
+				self.mPObj = self.parObj.mbzk;
+			}
 		},
 		methods: {
-			
+			criFoot(){
+				console.log('购买')
+			},
+			listClick(e){
+				let mTar = e.target;
+				if(mTar.className.indexOf("cri-one") !== -1){
+					window.location = mTar.dataset.uri;
+				}
+			}
 		}
 	}
 </script>
