@@ -1,16 +1,40 @@
 <template>
   <div class="body_all" id="app">
     <router-view/>
+		<m-dialog :prompt="prompt" :showDialog="showDialog" :diaFun="diaFun"></m-dialog>
   </div>
 </template>
 
 <script>
+	import mDialog from '@/components/temp/mDialog.vue';
+	import storage from './server/storage';
 	export default {
 		name: 'App',
+		data () {
+			return {
+				prompt:'需要获得用户昵称、头像',
+				showDialog:false
+			}
+		},
+		components:{
+			mDialog,
+		},
 		mounted(){
 			var self = this;
 			self.$store.dispatch('allPageFun');
+			var mToken = storage.get('msdWebToken2');
+			if(!mToken){
+				this.showDialog = true;
+			}
 		},
+		methods: {
+			diaFun(mBool){
+				if(mBool){
+					this.$router.push({path:'/author'});
+				}
+				this.showDialog = false;
+			}
+		}
 	}
 </script>
 

@@ -4,7 +4,7 @@
 			<p><span>4</span><span>0</span><span>4</span></p>
 			<p>该页面不存在(´･ω･`)</p>
 		</div>
-    </div>
+  </div>
 </template>
 
 <script>
@@ -26,6 +26,8 @@
 
 <style scoped>
 	.container {
+		position: absolute;
+		width: 100%;
 		font-size: 30px;
 		color: #3c3c3c;
 	}

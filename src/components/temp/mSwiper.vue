@@ -30,7 +30,7 @@
 	}
 </script>
 
-<style>
+<style scoped>
 	.swiper-container{
 		position: relative;
 		width: 750px;
