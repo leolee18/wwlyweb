@@ -15,16 +15,15 @@
 			var self = this;
 			if(self.isWeiXin()){
 				var code = self.GetUrlParame('code');
-				console.log(code)
 				if (!code) {
 					var domine = window.location.href.split('#')[0];
-					//window.location="https://open.weixin.qq.com/connect/oauth2/authorize?appid=wxd504aa4c3a7d7fe3&redirect_uri="+domine+"&response_type=code&scope=snsapi_userinfo&state=abc";
+					window.location="https://open.weixin.qq.com/connect/oauth2/authorize?appid=wxd504aa4c3a7d7fe3&redirect_uri="+domine+"&response_type=code&scope=snsapi_userinfo&state=abc";
 				} else {
 					var sendObj = {
 						code:code,
 						sessfun:this.sessfun
 					};
-					//this.$store.dispatch('loginWeiXin',sendObj);
+					this.$store.dispatch('loginWeiXin',sendObj);
 				}
 			}else{
 				console.log('不在微信里面')
@@ -40,9 +39,9 @@
         		if(mbool){
         			var mAutUrl = storage.get('authorUrl');
         			if(mAutUrl){
-        				this.$router.push({path:mAutUrl});
+						window.location = 'http://51coach.com/wwlyweb/#'+mAutUrl;
         			}else{
-        				this.$router.push({path:'/'});
+						window.location = 'http://51coach.com/wwlyweb/#/';
         			}
         		}else{
             		

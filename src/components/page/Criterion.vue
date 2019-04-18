@@ -67,6 +67,9 @@
 		position: relative;
 		width: 100%;
 		height: 480px;
+		padding: 0;
+		margin: 0;
+		display: block;
 		background-color: #3E3A39;
 	}
 	

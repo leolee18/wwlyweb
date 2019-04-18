@@ -54,14 +54,19 @@
 					return;
 				}
 				if(mType === 'jlly'){
+					document.title = '教练乐园';
 					this.mPObj = val.mjlly;
 				}else if(mType === 'mrt'){
+					document.title = '铭人堂';
 					this.mPObj = val.mmrt;
 				}else if(mType === 'jsly'){
+					document.title = '讲师乐园';
 					this.mPObj = val.mjsly;
 				}else if(mType === 'yskly'){
+					document.title = '衍生课乐园';
 					this.mPObj = val.myskly;
 				}else if(mType === 'syly'){
+					document.title = '商业乐园';
 					this.mPObj = val.msyly;
 				}
 			},
@@ -97,6 +102,9 @@
 	}
 	.cri-head-img{
 		position: relative;
+		padding: 0;
+		margin: 0;
+		display: block;
 		width: 100%;
 		height: 480px;
 		background-color: #3E3A39;

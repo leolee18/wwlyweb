@@ -3,10 +3,10 @@ import ser from '../../server/server';
 
 const state={
 	shareDefault:{
-		"imgUrl": "http://51coach.com/wwlyweb/img/log_lo.png",
+		"imgUrl": "http://51coach.com/wwlyweb/imgs/log_lo.png",
 		"link": "http://51coach.com/wwlyweb/#/",
-		"title": "迈士顿",
-		"desc": "迈士顿教练商学院，帮您成为生活和事业上的赢家！"
+		"title": "五维乐园",
+		"desc": "五维乐园"
 	},
 	sharePathArr:['/criterion','/raiders','/paradise'],
 	wxIs:window.navigator.userAgent.toLowerCase().match(/MicroMessenger/i) == 'micromessenger'?true:false
