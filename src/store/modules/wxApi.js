@@ -5,8 +5,8 @@ const state={
 	shareDefault:{
 		"imgUrl": "http://51coach.com/wwlyweb/imgs/log_lo.png",
 		"link": "http://51coach.com/wwlyweb/#/",
-		"title": "五维乐园",
-		"desc": "五维乐园"
+		"title": "一张门票畅行【五维乐园】",
+		"desc": "五大乐园:铭人堂乐园、教练乐园、讲师乐园、衍生课乐园、教练乐园，等你来体验！"
 	},
 	sharePathArr:['/criterion','/raiders','/paradise'],
 	wxIs:window.navigator.userAgent.toLowerCase().match(/MicroMessenger/i) == 'micromessenger'?true:false
