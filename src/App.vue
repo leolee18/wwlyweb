@@ -1,12 +1,11 @@
 <template>
   <div class="body_all" id="app">
     <router-view/>
-		<m-dialog :prompt="prompt" :showDialog="showDialog" :diaFun="diaFun"></m-dialog>
   </div>
 </template>
 
 <script>
-	import mDialog from '@/components/temp/mDialog.vue';
+
 	import storage from './server/storage';
 	export default {
 		name: 'App',
@@ -16,24 +15,20 @@
 				showDialog:false
 			}
 		},
-		components:{
-			mDialog,
-		},
+		
 		mounted(){
 			var self = this;
 			self.$store.dispatch('allPageFun');
-			var mToken = storage.get('msdWebToken2');
-			if(!mToken){
-				this.showDialog = true;
-			}
+			
+			var mToken = storage.get('msdWebToken'); 
+			self.$store.dispatch('loginWXToken',mToken);
+			
+			self.$store.dispatch('wxInit');
+			var jsWXUrl = window.location.href.split('#')[0];
+			self.$store.dispatch('loadWXConfig',{url:jsWXUrl});
 		},
 		methods: {
-			diaFun(mBool){
-				if(mBool){
-					this.$router.push({path:'/author'});
-				}
-				this.showDialog = false;
-			}
+			
 		}
 	}
 </script>

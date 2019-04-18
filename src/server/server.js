@@ -11,6 +11,9 @@ function serAdd(addres){
 		case 'wxLogin.php'://登录
 			returnStr = serInter+kc+addres;
 			break;
+		case 'sample.php'://分享参数
+			returnStr = 'http://51coach.com/msdweb/server/'+addres;
+			break;	
 		case 'local':
 			returnStr = serUrl;
 			break;	
@@ -50,7 +53,7 @@ function serUrl(url){
 	if(myUrl.length > 5){
 		var myType = url.substr(0,5);
     if (myType != "http:" && myType != "wxfil" && myType != "https"){
-			myUrl = 'http://v.51coach.com/xcxcl/' + myUrl;
+			myUrl = 'http://v.51coach.com/wwlyweb/' + myUrl;
 		}
 	}
 	return myUrl;

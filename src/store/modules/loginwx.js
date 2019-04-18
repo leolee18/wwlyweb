@@ -29,12 +29,18 @@ const actions={
 				if(typeof param.sessfun == 'function')param.sessfun(false);
 			}
 		})
+	},
+	loginWXToken({commit,state}, param){
+		commit(types.WEIXIN_SET_TOKEN,param);
 	}
 }
 const mutations={
 	[types.WEIXIN_LOGIN](state,data){
 		state.wxToken = data.token;
 		state.wxInfo = data.info;
+	},
+	[types.WEIXIN_SET_TOKEN](state,data){
+		state.wxToken = data;
 	}
 }
 

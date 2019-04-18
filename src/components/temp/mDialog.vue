@@ -100,3 +100,8 @@
   }
 </style>
 
+<!-- 	import mDialog from '@/components/temp/mDialog.vue';
+	components:{
+		mDialog,
+	},
+<m-dialog :prompt="prompt" :showDialog="showDialog" :diaFun="diaFun"></m-dialog> -->
