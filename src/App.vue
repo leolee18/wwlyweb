@@ -55,6 +55,11 @@
 		margin:0 auto;
 		background-color:#fff;
 	}
+	.all-img{
+		position: relative;
+		width: 100%;
+		display: block;
+	}
 	.evno{
 		pointer-events: none;
 	}

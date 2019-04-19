@@ -3,7 +3,7 @@
 		<img :src="'http://51coach.com/wwlyweb/'+mPObj.hImg" class="cri-head-img" />
 		<div @click="listClick" class="cri-con">
 			<div class="cri-tit">{{mPObj.jText}}</div>
-			<div class="cri-cont">{{mPObj.jCont}}</div>
+			<div class="cri-cont" v-html="mPObj.jCont"></div>
 			<div class="cri-tit">{{mPObj.aText}}</div>
 			<div v-for="(slide, index) in mPArr" :key="index" v-bind:data-uri="slide.uri" class="cri-one actob">{{slide.name}}</div>
 		</div>
@@ -132,7 +132,7 @@
 	}
 	.cri-one{
 		position: relative;
-		height: 110px;
+		min-height: 110px;
 		padding: 30px 40px;
 		border: 2px solid #F5C01B;
 		border-radius:8px;

@@ -42,7 +42,7 @@
 			<div class="ind-dht" data-mtyp="syly"><img src="../assets/ind_dh_syly.png" class="ind-dht-i evno" />商业乐园</div>
 		</div>
 		<div class="ind-fb">
-			<img src="../assets/ind_mpa.png" class="ind-fb-all acto" />
+			<img data-mtyp="wwbzk" src="../assets/ind_mpa.png" class="ind-fb-all acto" />
 		</div>
 	</div>
 </template>

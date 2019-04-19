@@ -2,19 +2,15 @@ import types from '../types.js'
 import ser from '../../server/server';
 
 const state={
-	apLygln:[],
-	apLyglo:[],
+	apLygl:[],
 	apWwbzk:[],
 	apParAll:null,
 	parObj:null
 }
 
 const getters={
-	apLygln(state){
-		return state.apLygln;
-	},
-	apLyglo(state){
-		return state.apLyglo;
+	apLygl(state){
+		return state.apLygl;
 	},
 	apWwbzk(state){
 		return state.apWwbzk;
@@ -28,8 +24,8 @@ const getters={
 }
 const actions={
 	allPageFun({commit,state}){
-    	ser.loadDataFun('all.php',{},function(msg){
-			//console.log(JSON.stringify(msg.cont))
+    	ser.loadDataFun('all2.php',{},function(msg){
+			console.log(JSON.stringify(msg.cont))
 	  		if(msg.status == 'success'){
 	  			commit(types.ALL_PAGE_DATA,msg.cont);
 	  		}
@@ -38,8 +34,7 @@ const actions={
 }
 const mutations={
 	[types.ALL_PAGE_DATA](state,data){
-		state.apLygln=data.listObj.lygln;
-		state.apLyglo=data.listObj.lyglo;
+		state.apLygl=data.listObj.lygl;
 		state.apWwbzk=data.listObj.wwbzk;
 		state.apParAll=data.listObj;
 		

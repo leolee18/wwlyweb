@@ -3,12 +3,12 @@
 		<img :src="'http://51coach.com/wwlyweb/'+mPObj.hImg" class="cri-head-img" />
 		<div @click="listClick" class="cri-con cri-bottom">
 			<div class="cri-tit">{{mPObj.jText}}</div>
-			<div class="cri-cont">{{mPObj.jCont}}</div>
+			<div class="cri-cont" v-html="mPObj.jCont"></div>
 			<div class="cri-tit">{{mPObj.aText}}</div>
 			<div v-for="(slide, index) in apWwbzk" :key="index" v-bind:data-uri="slide.uri" class="cri-one actob">{{slide.name}}</div>
 		</div>
 		<div class="cri-fb">
-			<div @click="criFoot" class="cri-fb-all acto">￥8800 立即加入</div>
+			<div @click="criFoot" class="cri-fb-all acto">立即加入</div>
 		</div>
 	</div>
 </template>
@@ -22,7 +22,8 @@
 					'hImg':'',
 					'jText':'',
 					'jCont':'',
-					'aText':''
+					'aText':'',
+					'gmUri':''
 				}
 			}
 		},
@@ -45,7 +46,9 @@
 		},
 		methods: {
 			criFoot(){
-				console.log('购买')
+				if(this.mPObj.gmUri != ""){
+					window.location = this.mPObj.gmUri;
+				}
 			},
 			listClick(e){
 				let mTar = e.target;
@@ -98,7 +101,7 @@
 	}
 	.cri-one{
 		position: relative;
-		height: 110px;
+		min-height: 110px;
 		padding: 30px 40px;
 		border: 2px solid #F5C01B;
 		border-radius:8px;
