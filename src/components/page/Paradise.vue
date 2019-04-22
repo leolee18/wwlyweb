@@ -57,7 +57,7 @@
 					document.title = '教练乐园';
 					this.mPObj = val.mjlly;
 				}else if(mType === 'mrt'){
-					document.title = '铭人堂';
+					document.title = '合伙人';
 					this.mPObj = val.mmrt;
 				}else if(mType === 'jsly'){
 					document.title = '讲师乐园';
@@ -128,7 +128,7 @@
 	.cri-cont{
 		position: relative;
 		font-size: 24px;
-		line-height: 34px;
+		line-height: 44px;
 	}
 	.cri-one{
 		position: relative;

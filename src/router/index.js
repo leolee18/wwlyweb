@@ -11,14 +11,14 @@ export default new Router({
 			name: 'index',
 			component: resolve => require(['@/components/Index'], resolve),
 			meta: {
-				title: '五维乐园'
+				title: 'FDCL五维教练乐园'
 			}
 		},
 		{
 			path: '/criterion',
 			component: resolve => require(['@/components/page/Criterion'], resolve),
 			meta: {
-				title: '五维标准课'
+				title: '新生乐园'
 			}
 		},
 		{

@@ -23,11 +23,11 @@
 		</div>
 		<div class="ind-dh ind-dh3">
 			<img src="@/assets/ind_dhbg.png" class="ind-dh-bg evno" />
-			<div class="ind-dht" data-mtyp="wwbzk"><img src="../assets/ind_dh_wwbzk.png" class="ind-dht-i evno" />五维标准课</div>
+			<div class="ind-dht" data-mtyp="wwbzk"><img src="../assets/ind_dh_wwbzk.png" class="ind-dht-i evno" />新生乐园</div>
 		</div>
 		<div class="ind-dh ind-dh4">
 			<img src="@/assets/ind_dhbg.png" class="ind-dh-bg evno" />
-			<div class="ind-dht" data-mtyp="mrt"><img src="../assets/ind_dh_mrt.png" class="ind-dht-i evno" />铭人堂</div>
+			<div class="ind-dht" data-mtyp="mrt"><img src="../assets/ind_dh_mrt.png" class="ind-dht-i evno" />合伙人</div>
 		</div>
 		<div class="ind-dh ind-dh5">
 			<img src="@/assets/ind_dhbg.png" class="ind-dh-bg evno" />
@@ -42,7 +42,7 @@
 			<div class="ind-dht" data-mtyp="syly"><img src="../assets/ind_dh_syly.png" class="ind-dht-i evno" />商业乐园</div>
 		</div>
 		<div class="ind-fb">
-			<img data-mtyp="wwbzk" src="../assets/ind_mpa.png" class="ind-fb-all acto" />
+			<img data-mtyp="mpgm" src="../assets/ind_mpa.png" class="ind-fb-all acto" />
 		</div>
 	</div>
 </template>
@@ -68,6 +68,8 @@
 						this.$router.push({path:'/raiders'});
 					}else if(mTar.dataset.mtyp === 'wwbzk'){
 						this.$router.push({path:'/criterion'});
+					}else if(mTar.dataset.mtyp === 'mpgm'){
+						window.location = 'https://detail.youzan.com/show/goods?alias=3exv568l15pns&sf=wx_sm&redirect_count=1&is_share=1&from_uuid=76208197-4c8c-dcbc-e905-13825fe92542';
 					}else{
 						this.$router.push({path:'/paradise/'+mTar.dataset.mtyp});
 					}

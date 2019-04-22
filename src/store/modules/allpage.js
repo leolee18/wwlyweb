@@ -24,8 +24,8 @@ const getters={
 }
 const actions={
 	allPageFun({commit,state}){
-    	ser.loadDataFun('all2.php',{},function(msg){
-			console.log(JSON.stringify(msg.cont))
+    	ser.loadDataFun('all.php',{},function(msg){
+			//console.log(JSON.stringify(msg.cont))
 	  		if(msg.status == 'success'){
 	  			commit(types.ALL_PAGE_DATA,msg.cont);
 	  		}

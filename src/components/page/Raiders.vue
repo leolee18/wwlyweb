@@ -88,7 +88,7 @@
 	.cri-cont{
 		position: relative;
 		font-size: 24px;
-		line-height: 34px;
+		line-height: 44px;
 	}
 	.cri-one{
 		position: relative;

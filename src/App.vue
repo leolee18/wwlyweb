@@ -59,6 +59,7 @@
 		position: relative;
 		width: 100%;
 		display: block;
+		margin: 10px auto;
 	}
 	.evno{
 		pointer-events: none;
